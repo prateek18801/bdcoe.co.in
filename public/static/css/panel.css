@@ -1,0 +1,55 @@
+body{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 9fr;
+}
+main{
+    height: 100%;
+}
+.header{
+    display: flex;
+    align-items: center;
+}
+.bdcoe{
+    font-size: 1.5rem;
+    margin-right: 5px;
+    font-family: 'Noto Sans', sans-serif;
+}
+#bd{
+    color: #0e81ec;
+}
+#navbar-logo{
+    width: 3rem;
+}
+.dashboard-grid{
+    height: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 3fr;
+}
+#control-card{
+    width: 85%;
+}
+#btn-close-reply{
+    position: absolute; 
+    top: 10px;
+    right: 20px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+@media screen and (max-width: 750px) {
+    .bdcoe{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    #coe{
+        font-size: 0.7rem;
+    }
+    .navbar-brand div{
+        display: flex;
+        flex-direction: column;
+    }
+}
