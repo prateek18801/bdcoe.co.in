@@ -6,15 +6,14 @@ const contactSchema = new mongoose.Schema({
         required: [true, "Name is required"],
         minlength: [2, "Name cannot be smaller than 2 characters"],
         validate: [(value) => {
-            return RegExp("^[a-zA-Z ]*$").test(value)
+            return /^[a-zA-Z ]*$/.test(value)
         }, "Name can only contain alphabets"]
     },
     email: {
         type: String,
         required: [true, "Email is required"],
-        lowercase: true,
         validate: [(value) => {
-            return RegExp("^[a-z0-9]{1,100}\@[a-z]{2,50}\.[a-z.]{2,5}$").test(value)
+            return /^[a-zA-Z0-9]{1,100}\@[a-zA-Z]{2,50}\.[a-zA-Z.]{2,5}$/.test(value)
         }, "Email not valid"]
     },
     message: {

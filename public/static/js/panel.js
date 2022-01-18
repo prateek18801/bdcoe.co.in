@@ -58,3 +58,21 @@ function populateDOM(state) {
     statusBadge.innerHTML = `${state.status ? "Open" : "Closed"}`;
     dateAlert.innerHTML = `<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill" /></svg><div>${state.status ? "Opened" : "Closed"} on ${state.modified}</div>`;
 }
+
+document.getElementById("btn-close-reply").addEventListener("click", ()=>{
+    document.getElementById("card-reply").style.bottom = "-450px";
+});
+
+
+function fetchRegistrations(){
+
+}
+function populateRegistraionDOM() {
+
+}
+function fetchMails() {
+
+}
+function populateMailDOM() {
+
+}

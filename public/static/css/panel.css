@@ -3,13 +3,6 @@ body{
     display: grid;
     grid-template-rows: 1fr 9fr;
 }
-main{
-    height: 100%;
-}
-.header{
-    display: flex;
-    align-items: center;
-}
 .bdcoe{
     font-size: 1.5rem;
     margin-right: 5px;
@@ -25,10 +18,26 @@ main{
     height: 100%;
     display: grid;
     align-items: center;
-    grid-template-columns: 2fr 3fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 9fr;
 }
-#control-card{
-    width: 85%;
+.statusbar{
+    border: 1px solid black;
+}
+.contact-control{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    padding: 0%;
+}
+#card-reply{
+    position: absolute;
+    width: 80%;
+    /* bottom: 10px; */
+    bottom: -450px;
+    right: 10px;
+    transition: all 0.5s ease;
+    z-index: 100;
 }
 #btn-close-reply{
     position: absolute; 
