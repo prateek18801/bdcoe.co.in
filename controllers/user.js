@@ -3,7 +3,9 @@ const Event = require("../models/event");
 const { sendContactConformation, sendEventConformation } = require("../services/confemail");
 
 exports.getRegister = (req, res, next) => {
-    res.status(200).send("GET: /register");
+    res.status(200).render("user/register", {
+        pageTitle: "event name"
+    });
 }
 
 exports.postRegister = (req, res, next) => {

@@ -1,5 +1,7 @@
 const Toggle = require("../models/toggle");
 const User = require("../models/users");
+const Contact = require("../models/contact");
+const Event = require("../models/event");
 const { age, generateToken } = require("../utils/token");
 
 exports.getLogin = (req, res, next) => {
@@ -42,6 +44,16 @@ exports.postToggle = (req, res, next) => {
             res.status(200).send(state);
         });
     }
+}
+
+exports.getEventLog = async (req, res, next) => {
+    const allRecords = await Event.find({});
+    res.status(200).json(allRecords);
+}
+
+exports.getContactLog = async (req, res, next) => {
+    const allContacts = await Contact.find({});
+    res.status(200).json(allContacts);
 }
 
 exports.getLogout = (req, res, next) => {

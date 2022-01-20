@@ -34,16 +34,28 @@
                     <h3 class="m-0">Administrator Panel</h3>
                 </section>
                 <section class="statusbar">
-                    <div class="d-grid gap-1 d-md-flex justify-content-md-start">
-                        <button type="button" class="btn btn-primary">
+                    <div class="d-grid gap-1 d-md-flex align-items-center justify-content-md-end me-2">
+                        <button class="btn btn-outline-dark">
+                            <span class="material-icons-outlined">info</span>
+                        </button>
+                        <button class="btn btn-outline-dark" onclick="downloadEventLog()">
+                            <span class="material-icons-outlined">file_download</span>
+                        </button>
+                        <div class="input-group mx-1">
+                            <input type="text" class="form-control" placeholder="Student number">
+                            <button class="btn btn-outline-primary" type="button" id="button-addon2">
+                                <span class="material-icons-outlined">person_search</span>
+                            </button>
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="fetchRegistrations()">
                             <span class="material-icons-outlined">event</span>
                             Event
                         </button>
-                        <button type="button" class="btn btn-primary">
+                        <button type="button" class="btn btn-warning mx-1">
                             <span class="material-icons-outlined">engineering</span>
                             Recruitment
                         </button>
-                        <button type="button" class="btn btn-primary">
+                        <button type="button" class="btn btn-primary" onclick="fetchMails()">
                             <span class="material-icons-outlined">email</span>
                             Inbox
                         </button>
@@ -55,7 +67,8 @@
                             <div class="navbar my-2 d-flex align-items-center">
                                 <h4 class="m-0">
                                     Regisration Status:
-                                    <span id="statusBadge" class="badge bg-<%= (state.status) ? 'success' : 'danger' %>">
+                                    <span id="statusBadge"
+                                        class="badge bg-<%= (state.status) ? 'success' : 'danger' %>">
                                         <%= state.status ? 'Open' : 'Closed' %>
                                     </span>
                                 </h4>
@@ -96,63 +109,13 @@
                     </div>
                 </section>
                 <section class="contact-control">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Std.No.</th>
-                                <th scope="col">Branch</th>
-                                <th scope="col">Domain</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Contact</th>
-                                <th scope="col">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Prateek Chaurasia</td>
-                                <td>2011093</td>
-                                <td>CSIT</td>
-                                <td>Web Dev</td>
-                                <td>prateek2011093@akgec.ac.in</td>
-                                <td>8726127335</td>
-                                <td class="d-flex">
-                                    <button class="btn btn-outline-danger p-0 me-1" type="button"><span class="material-icons-outlined">delete</span></button>
-                                    <button class="btn btn-outline-primary p-0" type="button"><span class="material-icons-outlined">edit</span></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Prateek Chaurasia</td>
-                                <td>2011093</td>
-                                <td>CSIT</td>
-                                <td>Web Dev</td>
-                                <td>prateek2011093@akgec.ac.in</td>
-                                <td>8726127335</td>
-                                <td class="d-flex">
-                                    <button class="btn btn-outline-danger p-0 me-1" type="button"><span class="material-icons-outlined">delete</span></button>
-                                    <button class="btn btn-outline-primary p-0" type="button"><span class="material-icons-outlined">edit</span></button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Prateek Chaurasia</td>
-                                <td>2011093</td>
-                                <td>CSIT</td>
-                                <td>Web Dev</td>
-                                <td>prateek2011093@akgec.ac.in</td>
-                                <td>8726127335</td>
-                                <td class="d-flex">
-                                    <button class="btn btn-outline-danger p-0 me-1" type="button"><span class="material-icons-outlined">delete</span></button>
-                                    <button class="btn btn-outline-primary p-0" type="button"><span class="material-icons-outlined">edit</span></button>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div id="table-container">
+                        <table class="table" id="content-table">
+                        </table>
+                    </div>
                     <div class="card" id="card-reply">
-                        <button id="btn-close-reply" type="button" class="btn-close" aria-label="Close" id="btn-close-reply"></button>
+                        <button id="btn-close-reply" type="button" class="btn-close" aria-label="Close"
+                            id="btn-close-reply"></button>
                         <div class="card-body">
                             <form action="/mailto/">
                                 <div class="mb-3">
@@ -181,21 +144,56 @@
 
         <%- include("../includes/end.ejs") %>
 
-        <!-- inside contact-control <div class="accordion accordion-flush" id="accordionFlushExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                    aria-controls="flush-collapseOne">
-                                    Accordion Item #1
-                                </button>
-                            </h2>
-                            <div id="flush-collapseOne" class="accordion-collapse collapse"
-                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                    demonstrate the <code>.accordion-flush</code> class. This is the first item's
-                                    accordion body.
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+            <!-- <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Std.No.</th>
+                <th scope="col">Branch</th>
+                <th scope="col">Domain</th>
+                <th scope="col">Email</th>
+                <th scope="col">Contact</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Prateek Chaurasia</td>
+                <td>2011093</td>
+                <td>CSIT</td>
+                <td>Web Dev</td>
+                <td>prateek2011093@akgec.ac.in</td>
+                <td>8726127335</td>
+                <td class="d-flex">
+                    <button class="btn btn-outline-danger p-0 me-1" type="button"><span class="material-icons-outlined">delete</span></button>
+                    <button class="btn btn-outline-primary p-0" type="button"><span class="material-icons-outlined">edit</span></button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Prateek Chaurasia</td>
+                <td>2011093</td>
+                <td>CSIT</td>
+                <td>Web Dev</td>
+                <td>prateek2011093@akgec.ac.in</td>
+                <td>8726127335</td>
+                <td class="d-flex">
+                    <button class="btn btn-outline-danger p-0 me-1" type="button"><span class="material-icons-outlined">delete</span></button>
+                    <button class="btn btn-outline-primary p-0" type="button"><span class="material-icons-outlined">edit</span></button>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Prateek Chaurasia</td>
+                <td>2011093</td>
+                <td>CSIT</td>
+                <td>Web Dev</td>
+                <td>prateek2011093@akgec.ac.in</td>
+                <td>8726127335</td>
+                <td class="d-flex">
+                    <button class="btn btn-outline-danger p-0 me-1" type="button"><span class="material-icons-outlined">delete</span></button>
+                    <button class="btn btn-outline-primary p-0" type="button"><span class="material-icons-outlined">edit</span></button>
+                </td>
+            </tr>
+        </tbody> -->

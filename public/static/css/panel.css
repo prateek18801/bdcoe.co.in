@@ -2,6 +2,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-rows: 1fr 9fr;
+    overflow: hidden;
 }
 .bdcoe{
     font-size: 1.5rem;
@@ -21,19 +22,27 @@ body{
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 9fr;
 }
-.statusbar{
-    border: 1px solid black;
-}
 .contact-control{
+    display: grid;
+    place-items: center;
     position: relative;
     overflow: hidden;
     height: 100%;
     padding: 0%;
 }
+#table-container{
+    height: 27rem;
+    width: 98%;
+    overflow-y: scroll;
+    border-radius: 5px;
+    border: 1px solid rgb(167, 167, 167);
+}
+#table-container::-webkit-scrollbar{
+    display: none;
+}
 #card-reply{
     position: absolute;
     width: 80%;
-    /* bottom: 10px; */
     bottom: -450px;
     right: 10px;
     transition: all 0.5s ease;

@@ -59,20 +59,92 @@ function populateDOM(state) {
     dateAlert.innerHTML = `<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill" /></svg><div>${state.status ? "Opened" : "Closed"} on ${state.modified}</div>`;
 }
 
-document.getElementById("btn-close-reply").addEventListener("click", ()=>{
+document.getElementById("btn-close-reply").addEventListener("click", () => {
     document.getElementById("card-reply").style.bottom = "-450px";
 });
 
 
-function fetchRegistrations(){
-
+async function fetchRegistrations() {
+    document.getElementById("content-table").innerHTML = `<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>`;
+    let response = await fetch(`/admin/eventlog8hUM5uE8unNJCOiGWhY197SqKPOJtwiJ/${userId}`, { method: 'GET' });
+    const jsonData = await response.json();
+    populateRegistraionDOM(jsonData);
 }
-function populateRegistraionDOM() {
-
+function populateRegistraionDOM(data) {
+    let tbodyContent = '';
+    let i = 1;
+    data.forEach(record => {
+        tbodyContent += `<tr>
+        <th scope="row">${i}</th>
+        <td>${record.name}</td>
+        <td>${record.stdno}</td>
+        <td>${record.branch}</td>
+        <td>${record.domain}</td>
+        <td>${record.email}</td>
+        <td>${record.contact}</td>
+        <td class="d-flex">
+            <button class="btn btn-outline-danger p-0 me-1" type="button"><span class="material-icons-outlined">delete</span></button>
+            <button class="btn btn-outline-primary p-0" type="button"><span class="material-icons-outlined">edit</span></button>
+        </td>
+    </tr>`
+        i++;
+    });
+    document.getElementById("content-table").innerHTML = `<thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Std.No.</th>
+        <th scope="col">Branch</th>
+        <th scope="col">Domain</th>
+        <th scope="col">Email</th>
+        <th scope="col">Contact</th>
+        <th scope="col">Actions</th>
+    </tr>
+</thead>
+<tbody id="content-table-body">
+</tbody>`
+    document.getElementById("content-table-body").innerHTML = tbodyContent;
 }
-function fetchMails() {
 
+
+async function fetchMails() {
+    document.getElementById("content-table").innerHTML = `<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>`;
+    let response = await fetch(`/admin/contactlogtehtp5Dy6FqYB6YEKvu4o9xJhlAeE3Xw/${userId}`, { method: 'GET' });
+    const jsonData = await response.json();
+    populateMailDOM(jsonData);
 }
-function populateMailDOM() {
+function populateMailDOM(data) {
+    let tbodyContent = '';
+    let i = 1;
+    data.forEach(record => {
+        tbodyContent += `<tr>
+        <th scope="row">${i}</th>
+        <td>${record.name}</td>
+        <td>${record.email}</td>
+        <td>${record.message}</td>
+        <td class="d-flex">
+            <button class="btn btn-outline-danger p-0" type="button"><span class="material-icons-outlined">delete</span></button>
+            <button class="btn btn-outline-success p-0 mx-1" type="button"><span class="material-icons-outlined">reply</span></button>
+            <button class="btn btn-outline-secondary p-0" type="button"><span class="material-icons-outlined">share</span></button>
+        </td>
+    </tr>`
+        i++;
+    });
+    document.getElementById("content-table").innerHTML = `<thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Message</th>
+        <th scope="col">Actions</th>
+    </tr>
+</thead>
+<tbody id="content-table-body">
+</tbody>`
+    document.getElementById("content-table-body").innerHTML = tbodyContent;
+}
 
+
+function downloadEventLog() {
+    // download current table
 }
