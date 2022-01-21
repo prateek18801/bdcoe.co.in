@@ -1,4 +1,20 @@
 const userId = document.getElementById("userId").value;
+const replyCard = document.getElementById("card-reply");
+const replyId = document.getElementById("mailto");
+const replySub = document.getElementById("mailsubject");
+const replyMessage = document.getElementById("mailcontent");
+
+document.getElementById("btn-close-reply").addEventListener("click", () => {
+    replyCard.style.bottom = "-450px";
+    replyId.value = '';
+    replySub.value = '';
+    replyMessage.value = '';
+});
+
+function replyToMail() {
+    replyCard.style.bottom = "10px";
+}
+
 async function toggleRegistration() {
     const password = prompt("Enter Password:").toLocaleLowerCase().trim();
     if (!password) return;
@@ -58,11 +74,6 @@ function populateDOM(state) {
     statusBadge.innerHTML = `${state.status ? "Open" : "Closed"}`;
     dateAlert.innerHTML = `<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill" /></svg><div>${state.status ? "Opened" : "Closed"} on ${state.modified}</div>`;
 }
-
-document.getElementById("btn-close-reply").addEventListener("click", () => {
-    document.getElementById("card-reply").style.bottom = "-450px";
-});
-
 
 async function fetchRegistrations() {
     document.getElementById("content-table").innerHTML = `<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>`;
@@ -124,8 +135,8 @@ function populateMailDOM(data) {
         <td>${record.message}</td>
         <td class="d-flex">
             <button class="btn btn-outline-danger p-0" type="button"><span class="material-icons-outlined">delete</span></button>
-            <button class="btn btn-outline-success p-0 mx-1" type="button"><span class="material-icons-outlined">reply</span></button>
-            <button class="btn btn-outline-secondary p-0" type="button"><span class="material-icons-outlined">share</span></button>
+            <button class="btn btn-outline-success p-0 mx-1" type="button" onclick="replyToMail()"><span class="material-icons-outlined">reply</span></button>
+            <button class="btn btn-outline-primary p-0" type="button"><span class="material-icons-outlined">share</span></button>
         </td>
     </tr>`
         i++;
