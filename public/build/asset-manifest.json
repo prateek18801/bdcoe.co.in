@@ -1,15 +1,39 @@
 {
   "files": {
-    "main.css": "/static/css/main.5029539e.css",
-    "main.js": "/static/js/main.d8a22ed9.js",
-    "static/media/home01.png": "/static/media/home01.b999405d8cfa1c074d84.png",
-    "static/media/logo.svg": "/static/media/logo.d36e2b8c4c87d7a22b0ed062a61e3254.svg",
+    "main.css": "/static/css/main.552c3bbf.chunk.css",
+    "main.js": "/static/js/main.ce8eddbf.chunk.js",
+    "main.js.map": "/static/js/main.ce8eddbf.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.edb82d6c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.edb82d6c.js.map",
+    "static/js/2.014feea2.chunk.js": "/static/js/2.014feea2.chunk.js",
+    "static/js/2.014feea2.chunk.js.map": "/static/js/2.014feea2.chunk.js.map",
     "index.html": "/index.html",
-    "main.5029539e.css.map": "/static/css/main.5029539e.css.map",
-    "main.d8a22ed9.js.map": "/static/js/main.d8a22ed9.js.map"
+    "precache-manifest.d3ff2ba896f04dc547330426dc5419bf.js": "/precache-manifest.d3ff2ba896f04dc547330426dc5419bf.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.552c3bbf.chunk.css.map": "/static/css/main.552c3bbf.chunk.css.map",
+    "static/js/2.014feea2.chunk.js.LICENSE.txt": "/static/js/2.014feea2.chunk.js.LICENSE.txt",
+    "static/media/Group 21.svg": "/static/media/Group 21.d1940a87.svg",
+    "static/media/Group 22.svg": "/static/media/Group 22.79dcd237.svg",
+    "static/media/Group 23.png": "/static/media/Group 23.6119bd74.png",
+    "static/media/Group 25.svg": "/static/media/Group 25.981836e9.svg",
+    "static/media/appD.svg": "/static/media/appD.e9dd5498.svg",
+    "static/media/bgData.svg": "/static/media/bgData.a5ec64fc.svg",
+    "static/media/cp.svg": "/static/media/cp.288e2063.svg",
+    "static/media/designing.svg": "/static/media/designing.2086667e.svg",
+    "static/media/github.svg": "/static/media/github.ec5bc1b3.svg",
+    "static/media/insta.svg": "/static/media/insta.e75317fa.svg",
+    "static/media/linkedin.svg": "/static/media/linkedin.d9049f46.svg",
+    "static/media/logo.svg": "/static/media/logo.731ab6e6.svg",
+    "static/media/ml.svg": "/static/media/ml.1bc2a53d.svg",
+    "static/media/port.svg": "/static/media/port.87cd4017.svg",
+    "static/media/sign1.svg": "/static/media/sign1.dc7c7616.svg",
+    "static/media/App2.css": "/static/media/teambg.d633b571.png",
+    "static/media/webD.svg": "/static/media/webD.8da4dcc6.svg"
   },
   "entrypoints": [
-    "static/css/main.5029539e.css",
-    "static/js/main.d8a22ed9.js"
+    "static/js/runtime-main.edb82d6c.js",
+    "static/js/2.014feea2.chunk.js",
+    "static/css/main.552c3bbf.chunk.css",
+    "static/js/main.ce8eddbf.chunk.js"
   ]
 }
