@@ -51,7 +51,7 @@ const eventSchema = new mongoose.Schema({
         type: String,
         required: [true, "Domain is required"],
         enum: {
-            values: ["app", "web", "design"],
+            values: ["app", "web", "fig", "psd"],
             message: "{VALUE} is not suppprted"
         }
     },

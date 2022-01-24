@@ -89,7 +89,7 @@ function populateRegistraionDOM(data) {
         <th scope="row">${i}</th>
         <td>${record.name}</td>
         <td>${record.stdno}</td>
-        <td>${record.branch}</td>
+        <td>${record.branch}-${record.section}</td>
         <td>${record.domain}</td>
         <td>${record.email}</td>
         <td>${record.contact}</td>

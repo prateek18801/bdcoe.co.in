@@ -4,7 +4,7 @@ const { sendContactConformation, sendEventConformation } = require("../services/
 
 exports.getRegister = (req, res, next) => {
     res.status(200).render("user/register", {
-        pageTitle: "event name"
+        pageTitle: "Tech Knockdown"
     });
 }
 
@@ -16,11 +16,13 @@ exports.postEvent = async (req, res, next) => {
     const { name, email, contact, stdno, branch, section, domain } = req.body;
     const eventRegistration = new Event({ name, email, contact, stdno, branch, section, domain });
     try{
-        const saved = await eventRegistration.save();
+        await eventRegistration.save();
         sendEventConformation({name, email});
-        res.status(201).send(saved)
+        res.status(201).render("user/success", {
+            pageTitle: "Registration Successful"
+        });
     }catch(err){
-        res.status(400).send("Already registered");
+        res.redirect("/q8CLbbym1GRf27Ngh685vHWqtZyVYwbi");
     }
 }
 
