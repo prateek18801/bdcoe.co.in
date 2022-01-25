@@ -9,5 +9,6 @@ router.post("/registerg82Oa7j1Px7CXYR3LdtyTNSXH9j7m9Jp", ifRegistrationOpen, use
 router.post("/contactqj5bJpdoFu2rwWBdXkGbeliJqLNGBqjT", contactLimiter, userController.postContact);
 router.post("/eventeQotDxuv9fNSCJS1IVIhYplZME8WK3g3", eventLimiter, userController.postEvent);
 router.get("/q8CLbbym1GRf27Ngh685vHWqtZyVYwbi", errorController.getFailed);
+router.get("/snz4Um9AKSkiAzq3c7IuRI0qdex3qTkZ", errorController.getClosed);
 
 module.exports = router;

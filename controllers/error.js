@@ -9,3 +9,9 @@ exports.getFailed = (req, res, next) => {
         pageTitle: "Error"
     });
 }
+
+exports.getClosed = (req, res, next) => {
+    res.status(403).render("error/closed", {
+        pageTitle: "Closed"
+    });
+}
