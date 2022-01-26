@@ -49,11 +49,13 @@ const eventSchema = new mongoose.Schema({
     },
     domain: {
         type: String,
-        required: [true, "Domain is required"],
+        // required: [true, "Domain is required"],
+        required: false,
         enum: {
-            values: ["app", "web", "fig", "psd"],
+            values: ["app", "web", "fig", "psd", "all"],
             message: "{VALUE} is not suppprted"
-        }
+        },
+        default: "all"
     },
     date: {
         type: Date,

@@ -32,8 +32,9 @@ exports.postContact = async (req, res, next) => {
     try {
         await contact.save();
         sendContactConformation(contact);
-        res.status(201).redirect('/');
+        return res.status(201).redirect('/');
     } catch (err) {
-        res.status(400).send("/contact");
+        console.log(err);
+        res.status(400).redirect("/contact");
     }
 }
