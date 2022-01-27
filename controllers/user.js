@@ -1,10 +1,18 @@
 const Contact = require("../models/contact");
 const Event = require("../models/event");
+const Feedback = require("../models/feedback");
 const { sendContactConformation, sendEventConformation } = require("../services/confemail");
 
 exports.getRegister = (req, res, next) => {
-    res.status(200).render("user/register", {
-        pageTitle: "Tech Knockdown"
+    // res.status(200).render("user/register", {
+    //     pageTitle: "Tech Knockdown"
+    // });
+    res.status(300).redirect("/snz4Um9AKSkiAzq3c7IuRI0qdex3qTkZ");
+}
+
+exports.getFeedback = (req, res, next) => {
+    res.status(200).render("user/feedback", {
+        pageTitle: "Feedback"
     });
 }
 
@@ -12,16 +20,33 @@ exports.postRegister = (req, res, next) => {
     res.status(200).send("POST: /register");
 }
 
+exports.postFeedback = async (req, res, next) => {
+    const { name, stdno, email, message } = req.body;
+    const eventFeedback = new Feedback({ name, stdno, email, message });
+    try {
+        const existing = await Event.findOne({ email: email }).exec();
+        if(existing){
+            await eventFeedback.save();
+            return res.status(201).render("user/feedbackSuccess", {
+                pageTitle: "Feedback"
+            });
+        }
+        res.status(300).redirect("/q8CLbbym1GRf27Ngh685vHWqtZyVYwbi")
+    } catch (err) {
+        res.status(400).send("<h2>Err: could not submit</h2>");
+    }
+}
+
 exports.postEvent = async (req, res, next) => {
     const { name, email, contact, stdno, branch, section, domain } = req.body;
     const eventRegistration = new Event({ name, email, contact, stdno, branch, section, domain });
-    try{
+    try {
         await eventRegistration.save();
-        sendEventConformation({name, email});
+        sendEventConformation({ name, email });
         res.status(201).render("user/success", {
             pageTitle: "Registration Successful"
         });
-    }catch(err){
+    } catch (err) {
         res.redirect("/q8CLbbym1GRf27Ngh685vHWqtZyVYwbi");
     }
 }

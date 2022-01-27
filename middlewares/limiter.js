@@ -12,4 +12,10 @@ const eventLimiter = rateLimit({
     message: "Blocked temporarily: too many requests" 
 });
 
-module.exports = { contactLimiter, eventLimiter };
+const feedbackLimiter = rateLimit({
+    windowMs: 2160000,
+    max: 2,
+    message: "Blocked temporarily: too many requests" 
+});
+
+module.exports = { contactLimiter, eventLimiter, feedbackLimiter };
