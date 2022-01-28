@@ -11,5 +11,7 @@ router.get("/eventlog8hUM5uE8unNJCOiGWhY197SqKPOJtwiJ/:userid", isAuthenticated,
 router.get("/tc7pwG8CkGLZGyNehzxAJrQCejNhDvrh", isAuthenticated, adminController.downloadEventLog);
 router.post("/togglenrUrxS5yvupftlt9RW6c1NeOdmz6ptOs", isAuthenticated, adminController.postToggle);
 router.get("/contactlogtehtp5Dy6FqYB6YEKvu4o9xJhlAeE3Xw/:userid", isAuthenticated, adminController.getContactLog);
+// router.get("/sendinvite", adminController.getSendInvite);
+
 
 module.exports = router;

@@ -3,6 +3,7 @@ const User = require("../models/users");
 const Contact = require("../models/contact");
 const Event = require("../models/event");
 const { age, generateToken } = require("../utils/token");
+// const { sendInvite } = require("../services/confemail");
 // const fs = require("fs");
 const path = require("path");
 const csvwriter = require("csv-writer");
@@ -95,3 +96,15 @@ exports.downloadEventLog = async (req, res, next) => {
             res.download(path.join(path.dirname(require.main.filename), "data", "event.csv"));
         });
 }
+
+// exports.getSendInvite = (req, res, next) => {
+//     const allRecords = await Event.find({});
+//     allRecords.forEach(record => {
+//         setTimeout(() => {
+//             const name = record.name;
+//             const email = record.email;
+//             sendInvite({ name: name, email: email });
+//         }, 100);
+//     });
+//     res.send("started mailing");
+// }

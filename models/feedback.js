@@ -30,6 +30,14 @@ const feedbackSchema = new mongoose.Schema({
             return /^(?:\b\w+\b[\s\r\n]*){5,}$/.test(value)
         }, "Message cannot be < 5 words"]
     },
+    domain: {
+        type: String,
+        enum: {
+            values: ["app", "web", "fig", "psd", "all"],
+            message: "{VALUE} is not suppprted"
+        },
+        default: "all"
+    },
     date: {
         type: Date,
         default: Date.now

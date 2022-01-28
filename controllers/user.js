@@ -22,9 +22,29 @@ exports.postRegister = (req, res, next) => {
 
 exports.postFeedback = async (req, res, next) => {
     const { name, stdno, email, message } = req.body;
-    const eventFeedback = new Feedback({ name, stdno, email, message });
+    const date = new Date();
+    let domain = "all";
+
+    if(date.getDate() === 29){
+        if(date.getHours() >= 11 && date.getHours() <= 15){
+            domain = "app";
+        }else{
+            domain = "web";
+        }
+    }else{
+        if(date.getHours() >= 11 && date.getHours() <= 13){
+            domain = "fig";
+        }else{
+            domain = "psd";
+        }
+    }
+
+    const eventFeedback = new Feedback({ name, stdno, email, message, domain });
     try {
-        const existing = await Event.findOne({ email: email }).exec();
+        let existing = await Event.findOne({ email: email }).exec();
+        if(!existing){
+            existing = await Event.findOne({ stdno: stdno}).exec();
+        }
         if(existing){
             await eventFeedback.save();
             return res.status(201).render("user/feedbackSuccess", {
