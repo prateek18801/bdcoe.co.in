@@ -154,8 +154,3 @@ function populateMailDOM(data) {
 </tbody>`
     document.getElementById("content-table-body").innerHTML = tbodyContent;
 }
-
-
-function downloadEventLog() {
-    // download current table
-}

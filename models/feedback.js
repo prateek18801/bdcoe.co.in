@@ -10,7 +10,7 @@ const feedbackSchema = new mongoose.Schema({
         }, "Name can only contain alphabets"]
     },
     stdno: {
-        type: Number,
+        type: String,
         required: [true, "Student number is required"],
         validate: [(value) => {
             return /^2[01]{1}\d{5}(?:-[dD]{1}){0,1}$/.test(value)
