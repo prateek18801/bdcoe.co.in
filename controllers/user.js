@@ -14,15 +14,16 @@ exports.getFeedback = (req, res, next) => {
 
     const date = new Date();
     let domain = "";
+    const hours = date.getHours();
 
     if(date.getDate() === 29){
-        if(date.getHours() >= 11 && date.getHours() <= 15){
+        if(hours >= 11 && hours < 15){
             domain = "App";
         }else{
             domain = "Photoshop";
         }
     }else{
-        if(date.getHours() >= 11 && date.getHours() <= 13){
+        if(hours >= 11 && hours < 13){
             domain = "Figma";
         }else{
             domain = "Web";
@@ -43,15 +44,16 @@ exports.postFeedback = async (req, res, next) => {
     const { name, stdno, email, message } = req.body;
     const date = new Date();
     let domain = "all";
+    const hours = date.getHours();
 
     if(date.getDate() === 29){
-        if(date.getHours() >= 11 && date.getHours() <= 15){
+        if(hours >= 11 && hours < 15){
             domain = "app";
         }else{
             domain = "psd";
         }
     }else{
-        if(date.getHours() >= 11 && date.getHours() <= 13){
+        if(hours >= 11 && hours < 13){
             domain = "fig";
         }else{
             domain = "web";
