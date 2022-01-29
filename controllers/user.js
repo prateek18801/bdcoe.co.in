@@ -11,8 +11,27 @@ exports.getRegister = (req, res, next) => {
 }
 
 exports.getFeedback = (req, res, next) => {
+
+    const date = new Date();
+    let domain = "";
+
+    if(date.getDate() === 29){
+        if(date.getHours() >= 11 && date.getHours() <= 15){
+            domain = "App";
+        }else{
+            domain = "Web";
+        }
+    }else{
+        if(date.getHours() >= 11 && date.getHours() <= 13){
+            domain = "Figma";
+        }else{
+            domain = "Photoshop";
+        }
+    }
+
     res.status(200).render("user/feedback", {
-        pageTitle: "Feedback"
+        pageTitle: "Feedback",
+        domain: domain
     });
 }
 
