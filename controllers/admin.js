@@ -2,6 +2,7 @@ const Toggle = require("../models/toggle");
 const User = require("../models/users");
 const Contact = require("../models/contact");
 const Event = require("../models/event");
+const Feedback = require("../models/feedback");
 const { age, generateToken } = require("../utils/token");
 // const { sendInvite } = require("../services/confemail");
 // const fs = require("fs");
@@ -108,3 +109,26 @@ exports.downloadEventLog = async (req, res, next) => {
 //     });
 //     res.send("started mailing");
 // }
+
+exports.downloadFeedbackLog = async (req, res, next) => {
+    const allRecords = await Feedback.find({});
+
+    const createCsvWriter = csvwriter.createObjectCsvWriter;
+    const csvWriter = createCsvWriter({
+        path: path.join(path.dirname(require.main.filename), "data", "feedback.csv"),
+        header: [
+            { id: '_id', title: 'ID' },
+            { id: 'name', title: 'NAME' },
+            { id: 'stdno', title: 'STDNO' },
+            { id: 'email', title: 'EMAIL' },
+            { id: 'message', title: 'MESSAGE' },
+            { id: 'domain', title: 'DOMAIN' },
+            { id: 'date', title: 'DATE' }
+        ]
+    });
+    csvWriter
+        .writeRecords(allRecords)
+        .then(() => {
+            res.download(path.join(path.dirname(require.main.filename), "data", "feedback.csv"));
+        });
+}
