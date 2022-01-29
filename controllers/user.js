@@ -19,13 +19,13 @@ exports.getFeedback = (req, res, next) => {
         if(date.getHours() >= 11 && date.getHours() <= 15){
             domain = "App";
         }else{
-            domain = "Web";
+            domain = "Photoshop";
         }
     }else{
         if(date.getHours() >= 11 && date.getHours() <= 13){
             domain = "Figma";
         }else{
-            domain = "Photoshop";
+            domain = "Web";
         }
     }
 
@@ -48,30 +48,31 @@ exports.postFeedback = async (req, res, next) => {
         if(date.getHours() >= 11 && date.getHours() <= 15){
             domain = "app";
         }else{
-            domain = "web";
+            domain = "psd";
         }
     }else{
         if(date.getHours() >= 11 && date.getHours() <= 13){
             domain = "fig";
         }else{
-            domain = "psd";
+            domain = "web";
         }
     }
 
     const eventFeedback = new Feedback({ name, stdno, email, message, domain });
     try {
-        let existing = await Event.findOne({ email: email }).exec();
-        if(!existing){
-            existing = await Event.findOne({ stdno: stdno}).exec();
-        }
-        if(existing){
-            await eventFeedback.save();
-            return res.status(201).render("user/feedbackSuccess", {
-                pageTitle: "Feedback"
-            });
-        }
-        res.status(300).redirect("/q8CLbbym1GRf27Ngh685vHWqtZyVYwbi")
+        // let existing = await Event.findOne({ email: email }).exec();
+        // if(!existing){
+        //     existing = await Event.findOne({ stdno: stdno}).exec();
+        // }
+        // if(existing){
+        //     res.status(300).redirect("/q8CLbbym1GRf27Ngh685vHWqtZyVYwbi")
+        // }
+        await eventFeedback.save();
+        return res.status(201).render("user/feedbackSuccess", {
+            pageTitle: "Feedback"
+        });
     } catch (err) {
+        // console.log(err);
         res.status(400).send("<h2>Err: could not submit</h2>");
     }
 }

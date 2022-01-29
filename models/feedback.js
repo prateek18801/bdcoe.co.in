@@ -11,24 +11,15 @@ const feedbackSchema = new mongoose.Schema({
     },
     stdno: {
         type: String,
-        required: [true, "Student number is required"],
-        validate: [(value) => {
-            return /^2[01]{1}\d{5}(?:-[dD]{1}){0,1}$/.test(value)
-        }, "Invalid student number"]
+        required: [true, "Student number is required"]
     },
     email: {
         type: String,
-        required: [true, "Email is required"],
-        validate: [(value) => {
-            return /^[a-zA-Z]{0,}2[01]{1}\d{5}(?:-[dD]{1}){0,1}@akgec\.ac\.in$/.test(value)
-        }, "Invalid email"]
+        required: [true, "Email is required"]
     },
     message: {
         type: String,
-        required: [true, "Message is required"],
-        validate: [(value) => {
-            return /^(?:\b\w+\b[\s\r\n]*){5,}$/.test(value)
-        }, "Message cannot be < 5 words"]
+        required: [true, "Message is required"]
     },
     domain: {
         type: String,

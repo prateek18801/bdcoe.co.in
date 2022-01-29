@@ -13,8 +13,8 @@ const eventLimiter = rateLimit({
 });
 
 const feedbackLimiter = rateLimit({
-    windowMs: 2160000,
-    max: 2,
+    windowMs: 70000,
+    max: 10,
     message: "Blocked temporarily: too many requests" 
 });
 
