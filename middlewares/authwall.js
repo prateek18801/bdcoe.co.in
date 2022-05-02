@@ -5,7 +5,7 @@ exports.isAuthenticated = (req, res, next) => {
     if(!token)  return res.status(401).redirect("/admin");
     jwt.verify(token, process.env.JWT_SECRET, (err)=>{
         if(err){
-            return res.status(401).redirect("/admin");
+            return res.status(403).redirect("/admin");
         }else{
             next();
         }

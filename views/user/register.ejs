@@ -1,86 +1,197 @@
 <%- include("../includes/head.ejs") %>
-  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous" defer></script>
-  <link rel="stylesheet" href="/css/register.css" />
-  </head>
+	<link rel="stylesheet" href="/css/index.css">
+	<link rel="preconnect" href="https://www.google.com">
+	<link rel="preconnect" href="https://www.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Condensed:wght@300&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+	<link rel="stylesheet" href="/css/codemaze.css">
+	<script src="/js/codemaze/index.js" defer></script>
+	<script src="/js/codemaze/particles.js" defer></script>
+	<script src="/js/codemaze/app.js" defer></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+	</head>
 
-  <body>
-    <div class="container">
-      <div class="forms-container">
-        <div class="signin-signup">
-          <form action="/eventeQotDxuv9fNSCJS1IVIhYplZME8WK3g3" method="POST">
-            <h2 class="title" style="padding-top: 2rem 0;">Register</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" name="name" id="name" placeholder="Name" pattern="^[a-zA-Z\s]+$" required />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" name="email" id="email" placeholder="Email"
-                pattern="^[a-zA-Z]*20[0-9]{5}@akgec\.ac\.in$" title="AKG email only" required />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-user-graduate"></i>
-              <input type="text" name="stdno" id="stdno" placeholder="Student No" pattern="^20[0-9]{5}$"
-                title="AKG student number only" required />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-phone"></i>
-              <input type="text" name="contact" id="contact" placeholder="contact"
-                pattern="^\d{10}$" required />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-code-branch"></i>
-              <select class="selectCls" name="branch" id="branch" pattern="^CS|AIML|DS|IT|ECE|EN|ME|CVL$" required>
-                <option value="" disabled selected hidden>Branch</option>
-                <option value="CSE">CSE</option>
-                <option value="AIML">AIML</option>
-                <option value="DS">DS</option>
-                <option value="CS">CS</option>
-                <option value="IT">IT</option>
-                <option value="CSIT">CSIT</option>
-                <option value="ECE">ECE</option>
-                <option value="EN">EN</option>
-                <option value="ME">ME</option>
-                <option value="CVL">Civil</option>
-              </select>
-            </div>
-            <div class="input-field">
-              <i class="fas fa-puzzle-piece"></i>
-              <select class="selectCls" name="section" id="section" pattern="^1|2|3$" required>
-                <option value="" disabled selected hidden> Section </option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </div>
-            <!-- <div class="input-field">
-              <i class="fas fa-code"></i>
-              <select class="selectCls" name="domain" id="domain" pattern="^web|app|psd|fig$" required>
-                <option value="" disabled selected hidden>Domain</option>
-                <option value="app">App Development</option>
-                <option value="web">Web Development</option>
-                <option value="fig">Figma</option>
-                <option value="psd">Photoshop</option>
-              </select>
-            </div> -->
-            <button type="submit" class="btn " id="sign-in-btn">
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
+	<body>
+		<div id="particles-js"></div>
+		<div class="container">
+			<div class="header">
+				<div class="logo"><img src="/assets/bigdata-logo.png" alt="bdcoe"></div>
+				<div class="presents">presents</div>
+				<div class="event"><img src="/assets/cdm-logo.svg" alt="codemaze"></div>
+				<div class="illustration"><img src="/assets/programmer.jpg" alt="coding"></div>
+				<button id="info-btn" type="button" class="btn" onclick="toggleInfo()">
+					<span class="material-icons-outlined">info</span>
+				</button>
+			</div>
+			<div class="info" id="info-div">
+				<div>
+					<p><b>&lt; CODEMAZE /&gt;</b></p>
+					<p>Dates : 7th and 8th May</p>
+					<p>Timings : 11am - 5am</p>
+					<p>Venue : IT LABS(3rd floor)</p>
+					<p>For any queries contact us on : <a href="http://www.bdcoe.co.in" target="_blank">bdcoe.co.in/contact</a></p>
+					<p>Instagram-handle : <a href="https://instagram.com/bdcoe?igshid=YmMyMTA2M2Y=" target="_blank">@bdcoe</a></p>
+				</div>
+				<button type="button" class="btn" id="btn-info" onclick="toggleInfo()">okay</button>
+			</div>
 
-      <div class="panels-container">
-        <div class="panel left-panel">
-          <div class="content">
-              <img src="/assets/td.png" alt="Tech Knockdown" width="300" style="filter: invert();">
-            <p>
-              A Comprehensive Introduction to Technologies !!
-            </p>
-          </div>
-          <img src="/assets/regimg.svg" class="image" alt="" />
-        </div>
-      </div>
-    </div>
+			<div class="form-container">
+				<form action="/register" method="POST" onsubmit="return validateForm()" name="registrationForm"
+					id="reg-form">
 
-    <%- include("../includes/end.ejs") %>
+					<div class="label">Team Details</div>
+					<div class="section team-details">
+						<span class="team-name-val err"></span>
+						<input type="text" placeholder="Team Name" name="teamname" class="inp" id="team-name" onblur="checkAvailability()" required>
+						<span class="year-val err"></span>
+						<select name="year" id="year" class="inp" required onchange="fillSections()">
+							<option value="" disabled selected hidden>Year</option>
+							<option value="1">First Year</option>
+							<option value="2">Second Year</option>
+						</select>
+						<span class="domain-name-val err"></span>
+						<input type="text" placeholder="Hackerrank Username" name="hackerrank" class="inp"
+							id="hackerrank" required>
+					</div>
+
+					<div class="label">Member 1</div>
+					<div class="section lead-details">
+
+						<span class="name-val err"></span>
+						<input type="text" placeholder="Name" name="leadname" id="lead-name" class="inp" required>
+
+						<div class="branch-section">
+							<select name="leadbranch" id="lead-branch" class="inp" required>
+								<option value="" disabled selected hidden>Branch</option>
+								<option value="CSE">CSE</option>
+								<option value="CS">CS</option>
+								<option value="AIML">CSE(AI&ML)</option>
+								<option value="DS">CS(DS)</option>
+								<option value="IT">IT</option>
+								<option value="CSIT">CS&IT</option>
+								<option value="ECE">ECE</option>
+								<option value="EN">EN</option>
+								<option value="ME">ME</option>
+								<option value="CVL">Civil</option>
+							</select>
+
+							<select name="leadsection" id="lead-section" class="inp" required>
+								<option value="" disabled selected hidden>Section</option>
+								<!-- <option value="1">S - 01</option>
+								<option value="2">S - 02</option>
+								<option value="3">S - 03</option>
+								<option value="4">S - 04</option>
+								<option value="5">S - 05</option>
+								<option value="6">S - 06</option>
+								<option value="7">S - 07</option>
+								<option value="8">S - 08</option>
+								<option value="9">S - 09</option>
+								<option value="10">S - 10</option>
+								<option value="11">S - 11</option>
+								<option value="12">S - 12</option>
+								<option value="13">S - 13</option>
+								<option value="14">S - 14</option>
+								<option value="15">S - 15</option>
+								<option value="16">S - 16</option>
+								<option value="17">S - 17</option>
+								<option value="18">S - 18</option>
+								<option value="19">S - 19</option> -->
+							</select>
+						</div>
+
+						<span class="stdno-val err"></span>
+						<input type="text" placeholder="Student Number" name="leadstdno" class="inp" id="lead-stdno"
+							required>
+
+						<span class="email-val err"></span>
+						<input type="email" placeholder="Email" name="leademail" class="inp" id="lead-email"
+							onfocus="autoFillLeadEmail()" required>
+
+						<select name="leadhostel" id="leadhostel" class="inp">
+							<option value="true">Hosteller</option>
+							<option value="false">Day Scholar</option>
+						</select>
+					</div>
+
+
+					<div class="label">Member 2</div>
+					<div class="section mem1-details">
+
+						<span class="name-val err"></span>
+						<input type="text" placeholder="Name" name="memname" id="mem1-name" class="inp" required>
+
+						<div class="branch-section">
+							<select name="membranch" id="mem1-branch" class="inp" required>
+								<option value="" disabled selected hidden>Branch</option>
+								<option value="CSE">CSE</option>
+								<option value="CS">CS</option>
+								<option value="AIML">CSE(AI&ML)</option>
+								<option value="DS">CS(DS)</option>
+								<option value="IT">IT</option>
+								<option value="CSIT">CS&IT</option>
+								<option value="ECE">ECE</option>
+								<option value="EN">EN</option>
+								<option value="ME">ME</option>
+								<option value="CVL">Civil</option>
+							</select>
+
+							<select name="memsection" id="mem1-section" class="inp" required>
+								<option value="" disabled selected hidden>Section</option>
+								<!-- <option value="1">S - 01</option>
+								<option value="2">S - 02</option>
+								<option value="3">S - 03</option>
+								<option value="4">S - 04</option>
+								<option value="5">S - 05</option>
+								<option value="6">S - 06</option>
+								<option value="7">S - 07</option>
+								<option value="8">S - 08</option>
+								<option value="9">S - 09</option>
+								<option value="10">S - 10</option>
+								<option value="11">S - 11</option>
+								<option value="12">S - 12</option>
+								<option value="13">S - 13</option>
+								<option value="14">S - 14</option>
+								<option value="15">S - 15</option>
+								<option value="16">S - 16</option>
+								<option value="17">S - 17</option>
+								<option value="18">S - 18</option>
+								<option value="19">S - 19</option> -->
+							</select>
+						</div>
+
+						<span class="stdno-val err"></span>
+						<input type="text" placeholder="Student Number" name="memstdno" class="inp" id="mem1-stdno"
+							required>
+
+						<span class="email-val err"></span>
+						<input type="email" placeholder="Email" name="mememail" class="inp" id="mem1-email"
+							onfocus="autoFillMem1Email()" required>
+
+						<select name="memhostel" id="hosteller" class="inp">
+							<option value="true">Hosteller</option>
+							<option value="false">Day Scholar</option>
+						</select>
+
+					</div>
+
+					<div class="captcha">
+						<div class="g-recaptcha" data-callback="captchaCb"
+							data-sitekey="6Ld7BHwdAAAAAIftwFN0Iy39lA2MebAf5nibxJEJ"></div>
+					</div>
+
+					<div id="btn-div">
+						<button type="submit" id="btn-submit" class="btn" disabled>Register</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</body>
+
+	</html>
+
+	<%- include("../includes/end.ejs") %>

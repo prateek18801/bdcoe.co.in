@@ -1,7 +1,7 @@
 const Toggle = require("../models/toggle");
 const User = require("../models/users");
 const Contact = require("../models/contact");
-const Event = require("../models/event");
+// const Event = require("../models/event");
 const Feedback = require("../models/feedback");
 const { age, generateToken } = require("../utils/token");
 // const { sendInvite } = require("../services/confemail");

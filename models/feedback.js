@@ -1,33 +1,19 @@
 const mongoose = require("mongoose");
 
 const feedbackSchema = new mongoose.Schema({
-    name: {
+    teamname: {
         type: String,
-        required: [true, "Name is required"],
-        minlength: [2, "Name cannot be smaller than 2 characters"],
-        validate: [(value) => {
-            return /^[a-zA-Z ]*$/.test(value)
-        }, "Name can only contain alphabets"]
+        required: [true, "teamname is required"],
+        unique: true
     },
-    stdno: {
-        type: String,
-        required: [true, "Student number is required"]
-    },
-    email: {
-        type: String,
-        required: [true, "Email is required"]
+    rating: {
+        type: Number,
+        required: [true, "rating is required"],
+        min: [1, "min 1"],
+        max: [5, "max 5"]
     },
     message: {
-        type: String,
-        required: [true, "Message is required"]
-    },
-    domain: {
-        type: String,
-        enum: {
-            values: ["app", "web", "fig", "psd", "all"],
-            message: "{VALUE} is not suppprted"
-        },
-        default: "all"
+        type: String
     },
     date: {
         type: Date,
