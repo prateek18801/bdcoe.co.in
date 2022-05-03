@@ -5,21 +5,30 @@ const Registration = require("../models/registration");
 const Feedback = require("../models/feedback");
 const { sendContactConformation, sendEventConformation } = require("../services/confemail");
 
-exports.getRegister = (req, res, next) => {
+
+// 01/05/2022 codemaze registrations
+
+exports.getRegister = async (req, res) => {
+
+    const firstYrRegCount = await Registration.countDocuments({ year: 1 });
+    const secondYrRegCount = await Registration.countDocuments({ year: 2 });
+    const firstYrStatus = (firstYrRegCount < 90) ? true : false;
+    const secondYrStatus = (secondYrRegCount < 90) ? true : false;
+
     res.status(200).render("user/register", {
-        pageTitle: "CODEMAZE"
+        pageTitle: "CODEMAZE",
+        firstYrStatus,
+        secondYrStatus
     });
     // res.status(300).redirect("/snz4Um9AKSkiAzq3c7IuRI0qdex3qTkZ");
 }
-
-// 01/05/2022 codemaze registrations
 
 exports.postRegister = async (req, res) => {
     const response_key = req.body["g-recaptcha-response"];
     if (!response_key) {
         return res.status(400).json({
             message: "Navigate back and complete captcha",
-            error: "https://youtu.be/ZqDyGue7knw?t=15"
+            error: "Captch Error"
         });
     }
     const url = `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SECRET_KEY}&response=${response_key}`;
@@ -60,8 +69,8 @@ exports.postRegister = async (req, res) => {
         const response = await axios.post(url);
         if (!response.data.success) {
             return rea.status(400).json({
-                message: "you are a robot",
-                error: "bkl"
+                message: "captcha error",
+                error: "you are a robot"
             });
         }
 
@@ -113,6 +122,10 @@ exports.getTeamAvailability = async (req, res) => {
     }
 }
 
+exports.getFeedback = (req, res, next) => {
+
+}
+
 exports.postFeedback = async (req, res) => {
     const { teamname, rating, message } = req.body;
     message = message.trim();
@@ -129,10 +142,6 @@ exports.postFeedback = async (req, res) => {
             error: err.message
         });
     }
-}
-
-exports.getFeedback = (req, res, next) => {
-
 }
 
 exports.postContact = async (req, res, next) => {

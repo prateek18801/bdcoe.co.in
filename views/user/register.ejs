@@ -29,12 +29,26 @@
 			</div>
 			<div class="info" id="info-div">
 				<div>
-					<p><b>&lt; CODEMAZE /&gt;</b></p>
-					<p>Dates : 7th and 8th May</p>
-					<p>Timings : 11am - 5am</p>
-					<p>Venue : IT LABS(3rd floor)</p>
-					<p>For any queries contact us on : <a href="http://www.bdcoe.co.in" target="_blank">bdcoe.co.in/contact</a></p>
-					<p>Instagram-handle : <a href="https://instagram.com/bdcoe?igshid=YmMyMTA2M2Y=" target="_blank">@bdcoe</a></p>
+					<h2>&lt; CODEMAZE /&gt;</h2>
+					<p>Each team will have a maximum of two participants. There will be three coding rounds and each
+						round will be followed by elimination. The difficulty level of questions increases with each
+						level. There will be quizzes, fun activities, and gifts all throughout the event.</p>
+					<div>
+						<p><strong>FOR FIRST YEAR STUDENTS</strong></p>
+						<div>📅 : 7th, May</div>
+						<div>⏲ : 13:00 - 17:00 hrs</div>
+						<div>🎯 : CS/IT Block (3rd Floor)</div>
+					</div>
+					<div>
+						<p><strong>FOR SECOND YEAR STUDENTS</strong></p>
+						<div>📅 : 8th, May</div>
+						<div>⏲ : 11:00 - 17:00 hrs</div>
+						<div>🎯 : CS/IT Block (3rd Floor)</div>
+					</div>
+					<p>For any queries contact us on : <a href="http://www.bdcoe.co.in"
+							target="_blank">bdcoe.co.in/contact</a></p>
+					<p>Instagram : <a href="https://instagram.com/bdcoe?igshid=YmMyMTA2M2Y="
+							target="_blank">ig@bdcoe</a></p>
 				</div>
 				<button type="button" class="btn" id="btn-info" onclick="toggleInfo()">okay</button>
 			</div>
@@ -46,12 +60,17 @@
 					<div class="label">Team Details</div>
 					<div class="section team-details">
 						<span class="team-name-val err"></span>
-						<input type="text" placeholder="Team Name" name="teamname" class="inp" id="team-name" onblur="checkAvailability()" required>
+						<input type="text" placeholder="Team Name" name="teamname" class="inp" id="team-name"
+							onblur="checkAvailability()" required>
 						<span class="year-val err"></span>
 						<select name="year" id="year" class="inp" required onchange="fillSections()">
 							<option value="" disabled selected hidden>Year</option>
-							<option value="1">First Year</option>
-							<option value="2">Second Year</option>
+							<% if(firstYrStatus) { %>
+								<option value="1">First Year</option>
+								<% } %>
+									<% if(secondYrStatus) { %>
+										<option value="2">Second Year</option>
+										<% } %>
 						</select>
 						<span class="domain-name-val err"></span>
 						<input type="text" placeholder="Hackerrank Username" name="hackerrank" class="inp"

@@ -264,18 +264,29 @@ input::-webkit-inner-spin-button {
 .info{
     display: flex;
     flex-direction: column;
-    text-align: center;
     align-items: center;
     background: rgb(255, 255, 255);
     box-shadow: 0 0px 15px 1px #e4e6ec;
     border-radius: 10px;
     position: absolute;
     transition: all 0.7s ease;
-    top: -20rem;
+    top: -35rem;
     width: 80%;
+    padding: 1rem;
+}
+.info h2 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+.info > div > div {
+    display: block;
+    margin: 0.5rem 0;
+}
+.info a {
+    color: #1e94ff;
 }
 #btn-info{
-    margin: 10px 0;
+    margin-top: 1rem;
     width: max-content;
     padding: 10px 20px;
     color: white;

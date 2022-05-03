@@ -10,14 +10,15 @@ const stdnoErr = document.getElementsByClassName("stdno-val");
 const emailErr = document.getElementsByClassName("email-val");
 const yearErr = document.getElementsByClassName("year-val");
 
-const form = document.forms['registrationForm']; 
+const form = document.forms['registrationForm'];
 
 function validateForm() {
     resetErr();
 
     let returnVal = true;
 
-    const team = form['teamname'].value;    
+    const team = form['teamname'].value;
+    const year = form['year'].value;
 
     const leadName = form['leadname'].value;
     const leadStdno = form['leadstdno'].value;
@@ -31,6 +32,30 @@ function validateForm() {
         throwErr(teamNameErr, errCode[0]);
         returnVal = false;
     }
+
+    if (year === "1") {
+        if (!/^21[\dx]{5,6}$/.test(leadStdno)) {
+            throwErr(stdnoErr[0], errCode[1]);
+            returnVal = false;
+        }
+        if (!/^21[\dx]{5,6}$/.test(memStdno)) {
+            throwErr(stdnoErr[1], errCode[1]);
+            returnVal = false;
+        }
+    }
+
+    if (year === "2") {
+        if (!/^20[\d]{5}[-dD]{0,2}$/.test(leadStdno)) {
+            throwErr(stdnoErr[0], errCode[1]);
+            returnVal = false;
+        }
+        if (!/^20[\d]{5}[-dD]{0,2}$/.test(memStdno)) {
+            throwErr(stdnoErr[1], errCode[1]);
+            returnVal = false;
+        }
+    }
+
+    
 
     if (!valName.test(leadName)) {
         throwErr(nameErr[0], errCode[0]);
@@ -85,43 +110,43 @@ function resetErr() {
     }
 }
 
-function captchaCb(){
+function captchaCb() {
     document.getElementById("btn-submit").removeAttribute("disabled");
 }
 
-function toggleInfo(){
-    
-    (document.getElementById("info-div").style.top==="5rem") ?
-        document.getElementById("info-div").style.top = "-20rem"
+function toggleInfo() {
+
+    (document.getElementById("info-div").style.top === "4rem") ?
+        document.getElementById("info-div").style.top = "-35rem"
         :
-        document.getElementById("info-div").style.top = "5rem";
+        document.getElementById("info-div").style.top = "4rem";
 }
 
-function autoFillLeadEmail(){
-    const leadName = form['leadname'].value.replace(/ .*/,'').toLowerCase();
+function autoFillLeadEmail() {
+    const leadName = form['leadname'].value.replace(/ .*/, '').toLowerCase();
     const leadStdno = form['leadstdno'].value;
-    if(leadName != '' && leadStdno != ''){
-        form['leademail'].value=`${leadName}${leadStdno}@akgec.ac.in`;
+    if (leadName != '' && leadStdno != '') {
+        form['leademail'].value = `${leadName}${leadStdno}@akgec.ac.in`;
     }
 }
-function autoFillMem1Email(){
-    const mem1Name = form['memname'].value.replace(/ .*/,'').toLowerCase();
+function autoFillMem1Email() {
+    const mem1Name = form['memname'].value.replace(/ .*/, '').toLowerCase();
     const mem1Stdno = form['memstdno'].value;
-    if(mem1Name != '' && mem1Stdno != ''){
-        form['mememail'].value=`${mem1Name}${mem1Stdno}@akgec.ac.in`;
+    if (mem1Name != '' && mem1Stdno != '') {
+        form['mememail'].value = `${mem1Name}${mem1Stdno}@akgec.ac.in`;
     }
 }
-function autoFillMem2Email(){
-    const mem2Name = form['memname'].value.replace(/ .*/,'').toLowerCase();
+function autoFillMem2Email() {
+    const mem2Name = form['memname'].value.replace(/ .*/, '').toLowerCase();
     const mem2Stdno = form['memstdno'].value;
-    if(mem2Name != '' && mem2Stdno != ''){
-        form['mememail'].value=`${mem2Name}${mem2Stdno}@akgec.ac.in`;
+    if (mem2Name != '' && mem2Stdno != '') {
+        form['mememail'].value = `${mem2Name}${mem2Stdno}@akgec.ac.in`;
     }
 }
 function fillSections() {
     const memsection = form['memsection'];
     const leadsection = form['leadsection'];
-    if(form['year'].value === "1") {
+    if (form['year'].value === "1") {
         memsection.innerHTML = leadsection.innerHTML = `<option value="" disabled selected hidden>Section</option>
         <option value="1">S - 01</option>
         <option value="2">S - 02</option>
@@ -142,7 +167,7 @@ function fillSections() {
         <option value="17">S - 17</option>
         <option value="18">S - 18</option>
         <option value="19">S - 19</option>`
-    } else if(form['year'].value === '2') {
+    } else if (form['year'].value === '2') {
         memsection.innerHTML = leadsection.innerHTML = `<option value="" disabled selected hidden>Section</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -151,13 +176,13 @@ function fillSections() {
 }
 async function checkAvailability() {
     const t = form['teamname'].value;
-    if(t === "") return;
+    if (t === "") return;
     const response = await fetch(`/api/v1/availability?t=${t}`);
     const json = await response.json();
-    if(json.error) {
+    if (json.error) {
         alert(json.message);
     }
-    if(!json.available) {
+    if (!json.available) {
         throwErr(teamNameErr, json.message);
     } else {
         teamNameErr.innerHTML = `<span style="color: green;">Available</span>`;
