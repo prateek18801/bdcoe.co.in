@@ -17,8 +17,8 @@ inputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 });
 
-function autofillEmail() {
-  const name = document.forms[0].elements[0].value.split(' ')[0].toLowerCase().trim();
-  const stdno = document.forms[0].elements[1].value.trim();
-  document.forms[0].elements[2].value = `${name}${stdno}@akgec.ac.in`;
-}
+// function autofillEmail() {
+//   const name = document.forms[0].elements[0].value.split(' ')[0].toLowerCase().trim();
+//   const stdno = document.forms[0].elements[1].value.trim();
+//   document.forms[0].elements[2].value = `${name}${stdno}@akgec.ac.in`;
+// }

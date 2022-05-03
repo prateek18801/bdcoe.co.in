@@ -1,125 +1,96 @@
-ID,NAME,EMAIL,CONTACT,STDNO,BRANCH,SECTION,DOMAIN,DATE
-61f0f597560ae36a0cd69295,Varun Varshney,varun2015303@akgec.ac.in,7300559100,2015303,AIML,1,all,Wed Jan 26 2022 12:47:43 GMT+0530 (India Standard Time)
-61f0f637560ae36a0cd6929c,Kumar Tushar Verma,kumar2013194@akgec.ac.in,7088533190,2013194,IT,2,all,Wed Jan 26 2022 12:50:23 GMT+0530 (India Standard Time)
-61f0f7220d337e5d6c31ac04,Ayush Choudhary ,ayush2012117@akgec.ac.in,8126912755,2012117,CS,1,all,Wed Jan 26 2022 12:54:18 GMT+0530 (India Standard Time)
-61f0f8280d337e5d6c31ac08,Rohan Shahi,rohanshahi2015417@akgec.ac.in,7398955192,2015417,DS,1,all,Wed Jan 26 2022 12:58:40 GMT+0530 (India Standard Time)
-61f0fa81c7bdc6329072cf16,Vansh Jain,Vansh2012140@akgec.ac.in,8447949303,2012140,CS,2,all,Wed Jan 26 2022 13:08:41 GMT+0530 (India Standard Time)
-61f0fb07caf300a212b50ff4,Vishu Chaudhary,vishu2010136@akgec.ac.in,7302290399,2010136,CSE,3,all,Wed Jan 26 2022 13:10:55 GMT+0530 (India Standard Time)
-61f0fcb2caf300a212b51019,Manglesh Kumar,Manglesh2010090@akgec.ac.in,8318554193,2010090,CSE,2,all,Wed Jan 26 2022 13:18:02 GMT+0530 (India Standard Time)
-61f0fcf5caf300a212b5101f,Akash Agrawal,akash2012004@akgec.ac.in,9837494284,2012004,CS,1,all,Wed Jan 26 2022 13:19:09 GMT+0530 (India Standard Time)
-61f0fcf9caf300a212b51021,Niharika Rastogi,niharika2010197@akgec.ac.in,9315757084,2010197,CSE,2,all,Wed Jan 26 2022 13:19:13 GMT+0530 (India Standard Time)
-61f0fd1ccaf300a212b51025,Govind aggarwal,govind2012119@akgec.ac.in,8006787677,2012119,CS,1,all,Wed Jan 26 2022 13:19:48 GMT+0530 (India Standard Time)
-61f0fd8ccaf300a212b51029,Payal Khatri,Payal2010193@akgec.ac.in,9625266126,2010193,CSE,2,all,Wed Jan 26 2022 13:21:40 GMT+0530 (India Standard Time)
-61f0fee8caf300a212b5102e,Manu Shukla,Manu2013046@akgec.ac.in,8429609765,2013046,IT,2,all,Wed Jan 26 2022 13:27:28 GMT+0530 (India Standard Time)
-61f10039caf300a212b51032,Unmesa dey,unmesa2013043@akgec.ac.in,8765347432,2013043,IT,3,all,Wed Jan 26 2022 13:33:05 GMT+0530 (India Standard Time)
-61f100a5caf300a212b51034,Siddharth Kumar Singh,Siddharth2021126@akgec.ac.in,9572890781,2021126,EN,2,all,Wed Jan 26 2022 13:34:53 GMT+0530 (India Standard Time)
-61f100b0caf300a212b51036,Ayush Tyagi,ayush2012143@akgec.ac.in,9149005527,2012143,CS,1,all,Wed Jan 26 2022 13:35:04 GMT+0530 (India Standard Time)
-61f10128caf300a212b51039,Devanshi Singhal,Devanshi2021057@akgec.ac.in,9557553366,2021057,EN,1,all,Wed Jan 26 2022 13:37:04 GMT+0530 (India Standard Time)
-61f10185caf300a212b5103b,Shreya Upadhyay,Shreya2011111@akgec.ac.in,7017453697,2011111,CSIT,2,all,Wed Jan 26 2022 13:38:37 GMT+0530 (India Standard Time)
-61f101abcaf300a212b5103d,Swati Agarwal,Swati2012030@akgec.ac.in,8979600304,2012030,CS,2,all,Wed Jan 26 2022 13:39:15 GMT+0530 (India Standard Time)
-61f1022dcaf300a212b51040,Divyansh dev,Divyansh2015401@akgec.ac.in,8707049320,2015401,DS,1,all,Wed Jan 26 2022 13:41:25 GMT+0530 (India Standard Time)
-61f10237caf300a212b51042,Harsh jaiswal,harsh2012091@akgec.ac.in,7607811792,2012091,CS,1,all,Wed Jan 26 2022 13:41:35 GMT+0530 (India Standard Time)
-61f1029ecaf300a212b51044,Parichit Aggarwal,parichit2012131@akgec.ac.in,9599580914,2012131,CS,2,all,Wed Jan 26 2022 13:43:18 GMT+0530 (India Standard Time)
-61f102a9caf300a212b51046,Swapnil Raj,Swapnil2010008@akgec.ac.in,9454903717,2010008,CSE,3,all,Wed Jan 26 2022 13:43:29 GMT+0530 (India Standard Time)
-61f102c2caf300a212b51048,Lokesh Sharma,Lokesh2010122@akgec.ac.in,7017470424,2010122,CSE,2,all,Wed Jan 26 2022 13:43:54 GMT+0530 (India Standard Time)
-61f1031dcaf300a212b5104d,Yashkant Tyagi,yashkant2013200@akgec.ac.in,7467825550,2013200,IT,3,all,Wed Jan 26 2022 13:45:25 GMT+0530 (India Standard Time)
-61f1042fcaf300a212b51055,Vansh Rastogi,vansh2021118@akgec.ac.in,8851164653,2021118,EN,2,all,Wed Jan 26 2022 13:49:59 GMT+0530 (India Standard Time)
-61f1045bcaf300a212b51057,Harsh Mishra,harsh2012006@akgec.ac.in,9667456225,2012006,CS,1,all,Wed Jan 26 2022 13:50:43 GMT+0530 (India Standard Time)
-61f10475caf300a212b5105a,Bhavya bansal,Bhavya2012129@akgec.ac.in,9634075464,2012129,CS,1,all,Wed Jan 26 2022 13:51:09 GMT+0530 (India Standard Time)
-61f104d4caf300a212b5105f,Kamakshi Vashista,Kamakshi2031193@akgec.ac.in,7037903770,2031193,ECE,2,all,Wed Jan 26 2022 13:52:44 GMT+0530 (India Standard Time)
-61f10507caf300a212b51062,Anjani Singhal,Anjani2012057@akgec.ac.in,7599166758,2012057,CS,1,all,Wed Jan 26 2022 13:53:35 GMT+0530 (India Standard Time)
-61f105f7caf300a212b51067,Mayank Johari,mayank2012024@akgec.ac.in,8826148753,2012024,CS,1,all,Wed Jan 26 2022 13:57:35 GMT+0530 (India Standard Time)
-61f10663caf300a212b5106b,Anupam,Anupam2010084@akgec.ac.in,7905085096,2010084,CSE,1,all,Wed Jan 26 2022 13:59:23 GMT+0530 (India Standard Time)
-61f106bacaf300a212b51072,Ayushi Gautam,Ayushi2015434@akgec.ac.in,9368951451,2015434,AIML,1,all,Wed Jan 26 2022 14:00:50 GMT+0530 (India Standard Time)
-61f106bccaf300a212b51074,anurudh kumar sharma,anurudh2011022@akgec.ac.in,9517122706,2011022,CSIT,1,all,Wed Jan 26 2022 14:00:52 GMT+0530 (India Standard Time)
-61f10726caf300a212b5107d,Harshita Gautam ,harshita2010087@akgec.ac.in,9354638189,2010087,CSE,2,all,Wed Jan 26 2022 14:02:38 GMT+0530 (India Standard Time)
-61f10768caf300a212b51082,Sameer Chhonkar,sameer2021022@akgec.ac.in,9557706463,2021022,EN,2,all,Wed Jan 26 2022 14:03:44 GMT+0530 (India Standard Time)
-61f107a8caf300a212b51084,Hansali,Hansali2015362@akgec.ac.in,9711337625,2015362,AIML,1,all,Wed Jan 26 2022 14:04:48 GMT+0530 (India Standard Time)
-61f108efcaf300a212b51088,Aditya Pulast,Aditya2013007@akgec.ac.in,8958318000,2013007,IT,1,all,Wed Jan 26 2022 14:10:15 GMT+0530 (India Standard Time)
-61f10926caf300a212b5108a,Ananya Arora,ananya2011091@akgec.ac.in,9355118595,2011091,CSIT,1,all,Wed Jan 26 2022 14:11:10 GMT+0530 (India Standard Time)
-61f10933caf300a212b5108c,Hari Bhajan Singh,hari2013076@akgec.ac.in,9452111722,2013076,IT,1,all,Wed Jan 26 2022 14:11:23 GMT+0530 (India Standard Time)
-61f10958caf300a212b5108f,Prashant Srivastava,Prashant2011042@akgec.ac.in,8756376840,2011042,CSIT,2,all,Wed Jan 26 2022 14:12:00 GMT+0530 (India Standard Time)
-61f10980caf300a212b51093,Nitish Chaurasiya,Nitish2012015@akgec.ac.in,8840867665,2012015,CS,2,all,Wed Jan 26 2022 14:12:40 GMT+0530 (India Standard Time)
-61f109bdcaf300a212b51095,Sankalp Srivastava,Sankalp2012008@akgec.ac.in,9569549131,2012008,CS,2,all,Wed Jan 26 2022 14:13:41 GMT+0530 (India Standard Time)
-61f10a98caf300a212b5109b,Devanshi garg,Devanshi2011037@akgec.ac.in,7310982118,2011037,CSIT,1,all,Wed Jan 26 2022 14:17:20 GMT+0530 (India Standard Time)
-61f10b12caf300a212b5109e,Ritesh Kumar,Ritesh2010077@akgec.ac.in,7388828281,2010077,CSE,2,all,Wed Jan 26 2022 14:19:22 GMT+0530 (India Standard Time)
-61f10b35caf300a212b510a1,udit kansal,udit2010207@akgec.ac.in,9026558948,2010207,CSE,3,all,Wed Jan 26 2022 14:19:57 GMT+0530 (India Standard Time)
-61f10b7ccaf300a212b510a5,Shivika Tyagi,Shivika2012046@akgec.ac.in,9760814509,2012046,CS,2,all,Wed Jan 26 2022 14:21:08 GMT+0530 (India Standard Time)
-61f10b8bcaf300a212b510a8,Aditya Shukla,Aditya2013053@akgec.ac.in,9140118657,2013053,IT,1,all,Wed Jan 26 2022 14:21:23 GMT+0530 (India Standard Time)
-61f10bddcaf300a212b510ac,Vikas Bhatia,Vikas2012044@akgec.ac.in,8864877301,2012044,CS,2,all,Wed Jan 26 2022 14:22:45 GMT+0530 (India Standard Time)
-61f10c0bcaf300a212b510ae,Raghavendra Singh,raghavendra2031079@akgec.ac.in,9452124366,2031079,ECE,2,all,Wed Jan 26 2022 14:23:31 GMT+0530 (India Standard Time)
-61f10ccacaf300a212b510b0,Sachin Kumar,sachin2013086@akgec.ac.in,9876543210,2013086,IT,3,all,Wed Jan 26 2022 14:26:42 GMT+0530 (India Standard Time)
-61f10d28caf300a212b510b4,Prashant Sharma,prashant2013009@akgec.ac.in,9026552300,2013009,IT,2,all,Wed Jan 26 2022 14:28:16 GMT+0530 (India Standard Time)
-61f10d3bcaf300a212b510b7,Ayushi Singh prajapati,Ayushi2015439@akgec.ac.in,9506592131,2015439,DS,1,all,Wed Jan 26 2022 14:28:35 GMT+0530 (India Standard Time)
-61f10de8caf300a212b510b9,Vaibhav Bansal,Vaibhav2015436@akgec.ac.in,7895896634,2015436,DS,1,all,Wed Jan 26 2022 14:31:28 GMT+0530 (India Standard Time)
-61f10e2bcaf300a212b510bc,Shreeyansh Srivastava ,Shreeyansh2010156@akgec.ac.in,9027175425,2010156,CSE,3,all,Wed Jan 26 2022 14:32:35 GMT+0530 (India Standard Time)
-61f10e63caf300a212b510be,Prateek Kumar Nigam,Prateek2010092@akgec.ac.in,8009461123,2010092,CSE,2,all,Wed Jan 26 2022 14:33:31 GMT+0530 (India Standard Time)
-61f10ececaf300a212b510c3,ASHUTOSH KUMAR SINGH,Ashutosh2013105@akgec.ac.in,9795965795,2013105,IT,1,all,Wed Jan 26 2022 14:35:18 GMT+0530 (India Standard Time)
-61f10f23caf300a212b510c6,Aradhya Singh,Aradhya2012076@akgec.ac.in,7706954419,2012076,CSE,1,all,Wed Jan 26 2022 14:36:43 GMT+0530 (India Standard Time)
-61f1105dcaf300a212b510c9,Divya Maddheshiya,Divya2013109@akgec.ac.in,8601029017,2013109,IT,1,all,Wed Jan 26 2022 14:41:57 GMT+0530 (India Standard Time)
-61f1115acaf300a212b510cf,Kavyanshi Agarwal ,Kavyanshi2015473@akgec.ac.in,7017717905,2015473,DS,1,all,Wed Jan 26 2022 14:46:10 GMT+0530 (India Standard Time)
-61f111efcaf300a212b510d1,SAHIL GUPTA,sahil2015310@akgec.ac.in,9336397077,2015310,AIML,1,all,Wed Jan 26 2022 14:48:39 GMT+0530 (India Standard Time)
-61f11216caf300a212b510d5,Manas Rai,manas2011013@akgec.ac.in,9870531530,2011013,CSIT,2,all,Wed Jan 26 2022 14:49:18 GMT+0530 (India Standard Time)
-61f11223caf300a212b510d7,Nusrat nigar,nusrat2012060@akgec.ac.in,9389789790,2012060,CS,2,all,Wed Jan 26 2022 14:49:31 GMT+0530 (India Standard Time)
-61f11561caf300a212b510db,Shashwat Pandey,shashwat2011049@akgec.ac.in,7505351554,2011049,CSIT,2,all,Wed Jan 26 2022 15:03:21 GMT+0530 (India Standard Time)
-61f11958caf300a212b510dd,Kartik Kumar,kartik2015359@akgec.ac.in,9958914696,2015359,AIML,1,all,Wed Jan 26 2022 15:20:16 GMT+0530 (India Standard Time)
-61f11f54caf300a212b510eb,Paras Singhal,paras2015403@akgec.ac.in,8630353084,2015403,DS,1,all,Wed Jan 26 2022 15:45:48 GMT+0530 (India Standard Time)
-61f11f67caf300a212b510ed,Aadrika Singh,aadrika2010018@akgec.ac.in,8604800789,2010018,CSE,1,all,Wed Jan 26 2022 15:46:07 GMT+0530 (India Standard Time)
-61f120f7caf300a212b510ef,Anjali Patel,Anjali2010091@akgec.ac.in,9198448121,2010091,CSE,1,all,Wed Jan 26 2022 15:52:47 GMT+0530 (India Standard Time)
-61f1227fcaf300a212b510f1,Shreya Shukla,Shreya2012011@akgec.ac.in,8787226808,2012011,CS,2,all,Wed Jan 26 2022 15:59:19 GMT+0530 (India Standard Time)
-61f1256be87d82e416458558,Vinit Pundeer,Vinit2010188@akgec.ac.in,9027829470,2010188,CSE,3,all,Wed Jan 26 2022 16:11:47 GMT+0530 (India Standard Time)
-61f12769e87d82e416458561,DEVANSH,devansh2010056@akgec.ac.in,8957924231,2010056,CSE,2,all,Wed Jan 26 2022 16:20:17 GMT+0530 (India Standard Time)
-61f127a2e87d82e416458563,Shahbaz Ali,shahbaz2011055@akgec.ac.in,7398358012,2011055,CSIT,2,all,Wed Jan 26 2022 16:21:14 GMT+0530 (India Standard Time)
-61f127d0e87d82e416458567,Varshney Aditya ,varshney2015468@akgec.ac.in,9625997337,2015468,DS,1,all,Wed Jan 26 2022 16:22:00 GMT+0530 (India Standard Time)
-61f12867e87d82e41645856d,Sandeep Tyagi ,Sandeep2000091@akgec.ac.in,9548970960,2000091,CVL,1,all,Wed Jan 26 2022 16:24:31 GMT+0530 (India Standard Time)
-61f12879e87d82e41645856f,diksha singh,diksha2021134@akgec.ac.in,7082375355,2021134,EN,1,all,Wed Jan 26 2022 16:24:49 GMT+0530 (India Standard Time)
-61f129e1e87d82e416458573,YASH PANDEY,yash2012017@akgec.ac.in,8081012000,2012017,CS,2,all,Wed Jan 26 2022 16:30:49 GMT+0530 (India Standard Time)
-61f12a16e87d82e416458575,Vyom Ranjan,Vyom2012074@akgec.ac.in,9587002416,2012074,CS,2,all,Wed Jan 26 2022 16:31:42 GMT+0530 (India Standard Time)
-61f12a1ee87d82e416458577,Mayank gupta,Mayank2010031@akgec.ac.in,7895938096,2010031,CSE,2,all,Wed Jan 26 2022 16:31:50 GMT+0530 (India Standard Time)
-61f12a6be87d82e416458579,Yashika Bansal,Yashika2012123@akgec.ac.in,8860973723,2012123,CS,2,all,Wed Jan 26 2022 16:33:07 GMT+0530 (India Standard Time)
-61f12c5de87d82e41645857b,Nishchal Singh,Nishchal2015469@akgec.ac.in,9520276251,2015469,DS,1,all,Wed Jan 26 2022 16:41:25 GMT+0530 (India Standard Time)
-61f12d59e87d82e41645857f,Shreyashi Jaiswal,Shreyashi2015325@akgec.ac.in,7007926369,2015325,AIML,1,all,Wed Jan 26 2022 16:45:37 GMT+0530 (India Standard Time)
-61f12f0ae87d82e416458581,Aman Yadav,aman2015428@akgec.ac.in,9548509844,2015428,DS,1,all,Wed Jan 26 2022 16:52:50 GMT+0530 (India Standard Time)
-61f13033e87d82e416458583,Ridhi Ranjan,ridhi2031146@akgec.ac.in,9311276207,2031146,IT,3,all,Wed Jan 26 2022 16:57:47 GMT+0530 (India Standard Time)
-61f131dee87d82e416458585,Shashank Gaur,Shashank2010027@akgec.ac.in,8077634481,2010027,CSE,3,all,Wed Jan 26 2022 17:04:54 GMT+0530 (India Standard Time)
-61f131e7e87d82e416458587,Kapil Gupta,kapil2010076@akgec.ac.in,9580281808,2010076,CSE,2,all,Wed Jan 26 2022 17:05:03 GMT+0530 (India Standard Time)
-61f1329be87d82e41645858b,Vivek Sharma ,vivek2012026@akgec.ac.in,9335669655,2012026,CS,2,all,Wed Jan 26 2022 17:08:03 GMT+0530 (India Standard Time)
-61f1340ee87d82e41645858d,Abhinav kumar,Abhinav2015302@akgec.ac.in,9412606404,2015302,AIML,1,all,Wed Jan 26 2022 17:14:14 GMT+0530 (India Standard Time)
-61f134d8e87d82e41645858f,SHIVAM TOMAR,Shivam2010129@akgec.ac.in,9058174197,2010129,CSE,3,all,Wed Jan 26 2022 17:17:36 GMT+0530 (India Standard Time)
-61f13932e87d82e416458596,Aviral Dixit,Aviral2015405@akgec.ac.in,7355118790,2015405,DS,1,all,Wed Jan 26 2022 17:36:10 GMT+0530 (India Standard Time)
-61f13bb0e87d82e41645859b,Deepansh Gupta,deepansh2012073@akgec.ac.in,9027763867,2012073,CS,1,all,Wed Jan 26 2022 17:46:48 GMT+0530 (India Standard Time)
-61f13f6ee87d82e41645859f,Nishtha Pandey,nishtha2010131@akgec.ac.in,6392954776,2010131,CSE,2,all,Wed Jan 26 2022 18:02:46 GMT+0530 (India Standard Time)
-61f141ace87d82e4164585a2,SHREYASH SHUKLA,Shreyash2013071@akgec.ac.in,6306211105,2013071,IT,3,all,Wed Jan 26 2022 18:12:20 GMT+0530 (India Standard Time)
-61f14359e87d82e4164585a5,Alok Nagaria,alok2010172@akgec.ac.in,9129846240,2010172,CSE,1,all,Wed Jan 26 2022 18:19:29 GMT+0530 (India Standard Time)
-61f1474ae87d82e4164585a7,Astha Choudhary,Astha2021035@akgec.ac.in,9569696272,2021035,EN,1,all,Wed Jan 26 2022 18:36:18 GMT+0530 (India Standard Time)
-61f148b4e87d82e4164585a9,Jasmeen Kaur,jasmeen2012106@akgec.ac.in,9540539534,2012106,CS,1,all,Wed Jan 26 2022 18:42:20 GMT+0530 (India Standard Time)
-61f14952e87d82e4164585ab,KUMARI DEEKSHA,Kumari2015309@akgec.ac.in,9696865334,2015309,AIML,1,all,Wed Jan 26 2022 18:44:58 GMT+0530 (India Standard Time)
-61f149ade87d82e4164585af,Jayaditya Mishra,jayaditya2015404@akgec.ac.in,9451111418,2015404,DS,1,all,Wed Jan 26 2022 18:46:29 GMT+0530 (India Standard Time)
-61f14d04e87d82e4164585b1,Nandini Jindal,nandini2010130@akgec.ac.in,7982464147,2010130,CSE,2,all,Wed Jan 26 2022 19:00:44 GMT+0530 (India Standard Time)
-61f14f6de87d82e4164585b3,Shobhit singh rawat,Shobhit2031141@akgec.ac.in,9936737663,2031141,ECE,3,all,Wed Jan 26 2022 19:11:01 GMT+0530 (India Standard Time)
-61f14f81e87d82e4164585b5,Shagun Choudhary,shagun2015435@akgec.ac.in,7292030540,2015435,DS,1,all,Wed Jan 26 2022 19:11:21 GMT+0530 (India Standard Time)
-61f14f89e87d82e4164585b8,Aditya Bhattacharya,aditya2040078@akgec.ac.in,9335004344,2040078,ME,1,all,Wed Jan 26 2022 19:11:29 GMT+0530 (India Standard Time)
-61f151f1e87d82e4164585ba,Dewang singh,Dewang2010145@akgec.ac.in,6392849574,2010145,CSE,2,all,Wed Jan 26 2022 19:21:45 GMT+0530 (India Standard Time)
-61f156d9e87d82e4164585bc,Lakshay Garg ,Lakshay2010126@akgec.ac.in,8923612993,2010126,CSE,2,all,Wed Jan 26 2022 19:42:41 GMT+0530 (India Standard Time)
-61f15952e87d82e4164585be,Yashdeep Tyagi,yashdeep2031178@akgec.ac.in,8394042950,2031178,ECE,3,all,Wed Jan 26 2022 19:53:14 GMT+0530 (India Standard Time)
-61f15a56e87d82e4164585c1,SAURABH TIWARI,Saurabh2031108@akgec.ac.in,7459834225,2031108,ECE,3,all,Wed Jan 26 2022 19:57:34 GMT+0530 (India Standard Time)
-61f161c0e87d82e4164585c7,Abhishek raj verma,Abhishek2010112@akgec.ac.in,9559321293,2010112,CSE,1,all,Wed Jan 26 2022 20:29:12 GMT+0530 (India Standard Time)
-61f1621ce87d82e4164585cb,Manika Agarwal,manika2012122@akgec.ac.in,7248531411,2012122,CS,1,all,Wed Jan 26 2022 20:30:44 GMT+0530 (India Standard Time)
-61f16414e87d82e4164585cd,Shourya Singh Sengar,Shourya2013006@akgec.ac.in,9717838216,2013006,IT,3,all,Wed Jan 26 2022 20:39:08 GMT+0530 (India Standard Time)
-61f16681e87d82e4164585d0,Manas Mishra,Manas2013011@akgec.ac.in,6239139572,2013011,IT,2,all,Wed Jan 26 2022 20:49:29 GMT+0530 (India Standard Time)
-61f16688e87d82e4164585d2,Vishal Mishra,Vishal2013072@akgec.ac.in,6393838433,2013973,IT,3,all,Wed Jan 26 2022 20:49:36 GMT+0530 (India Standard Time)
-61f169cfe87d82e4164585d7,Pranshi Goyal,pranshi2013176@akgec.ac.in,9045588021,2013176,IT,2,all,Wed Jan 26 2022 21:03:35 GMT+0530 (India Standard Time)
-61f169dae87d82e4164585d9,Sarthak Gupta,Sarthak2015338@akgec.ac.in,9205224558,2015338,AIML,1,all,Wed Jan 26 2022 21:03:46 GMT+0530 (India Standard Time)
-61f16b79e87d82e4164585dd,AKSHIT TYAGI,akshit2012130@akgec.ac.in,7906767568,2012130,CS,1,all,Wed Jan 26 2022 21:10:41 GMT+0530 (India Standard Time)
-61f16e1ce87d82e4164585e3,Jhalak Agarwal,Jhalak2011088@akgec.ac.in,9540117901,2011088,DS,1,all,Wed Jan 26 2022 21:21:56 GMT+0530 (India Standard Time)
-61f17055e87d82e4164585e8,Mahima varun,Mahima2013088@akgec.ac.in,8954802894,2013088,IT,2,all,Wed Jan 26 2022 21:31:25 GMT+0530 (India Standard Time)
-61f20506341c5bf599c6f469,Samiksha Khandelwal,Samiksha2015306@akgec.ac.in,9696325025,2015306,AIML,1,all,Thu Jan 27 2022 08:05:50 GMT+0530 (India Standard Time)
-61f20e3e5b7db071a882bf83,Shambhavi Shukla,Shambhavi2011095@akgec.ac.in,9140351290,2011095,CSIT,2,all,Thu Jan 27 2022 08:45:10 GMT+0530 (India Standard Time)
-61f2151d5b7db071a882bf85,Pratham Jain,Pratham2010157@akgec.ac.in,7017791942,2010157,CSE,2,all,Thu Jan 27 2022 09:14:29 GMT+0530 (India Standard Time)
-61f21a145b7db071a882bf87,Bhanu Pratap Singh,bhanu2011043@akgec.ac.in,7351707486,2011043,CSIT,1,all,Thu Jan 27 2022 09:35:40 GMT+0530 (India Standard Time)
-61f2d5810d299b0a1c1f069b,Akash Kanaujiya,akash2112001-d@akgec.ac.in,9999999999,2112001,CS,1,all,Thu Jan 27 2022 22:55:21 GMT+0530 (India Standard Time)
-61f2d5ad0d299b0a1c1f069d,Utkarsh Gupta,utkarsh2110004-d@akgec.ac.in,9999999998,2110004,CSE,2,all,Thu Jan 27 2022 22:56:05 GMT+0530 (India Standard Time)
-61f2d5f00d299b0a1c1f069f,Aman,aman2111001-d@akgec.ac.in,9999999997,2111001,CSIT,1,all,Thu Jan 27 2022 22:57:12 GMT+0530 (India Standard Time)
-61f2d6150d299b0a1c1f06a1,Danish Husain,danish2111003-d@akgec.ac.in,9999999996,2111003,CSIT,2,all,Thu Jan 27 2022 22:57:49 GMT+0530 (India Standard Time)
-61f2d63b0d299b0a1c1f06a3,Gaurav Singh,gaurav2115402-d@akgec.ac.in,9999999995,2115402,DS,2,all,Thu Jan 27 2022 22:58:27 GMT+0530 (India Standard Time)
-61f2d66f0d299b0a1c1f06a5,ravi pratap singh,ravi2110012-d@akgec.ac.in,9999999994,2110012,CSE,2,all,Thu Jan 27 2022 22:59:19 GMT+0530 (India Standard Time)
+TEAM NAME,YEAR,LEADER,MEMBER,BRANCH,SECTION,HACKERRANK USERNAME,DATE
+apple,2,"{
+  name: 'prateek chaurasia',
+  stdno: '2011093',
+  email: 'prateek2011093@akgec.ac.in',
+  branch: 'CSIT',
+  section: 2,
+  year: 2,
+  hostel: true,
+  _id: new ObjectId(""62703b739483fdb365927c83"")
+}","{
+  name: 'parichit aggarwal',
+  stdno: '2012131',
+  email: 'parichit2012131@akgec.ac.in',
+  branch: 'CS',
+  section: 2,
+  year: 2,
+  hostel: true,
+  _id: new ObjectId(""62703b739483fdb365927c84"")
+}",,,prateek18801,Tue May 03 2022 01:43:39 GMT+0530 (India Standard Time)
+code warriors,1,"{
+  name: 'aaaaa aaaaaa',
+  stdno: '210xxx45',
+  email: 'aaaaa210xxx45@akgec.ac.in',
+  branch: 'AIML',
+  section: 12,
+  year: 1,
+  hostel: true,
+  _id: new ObjectId(""62705058b5717a89da444445"")
+}","{
+  name: 'pppppp ppppppp',
+  stdno: '21xxx893',
+  email: 'pppppp21xxx893@akgec.ac.in',
+  branch: 'ME',
+  section: 6,
+  year: 1,
+  hostel: true,
+  _id: new ObjectId(""62705058b5717a89da444446"")
+}",,,appeld3324543,Tue May 03 2022 03:12:48 GMT+0530 (India Standard Time)
+mango,1,"{
+  name: 'apple mango',
+  stdno: '21093456',
+  email: 'apple21093456@akgec.ac.in',
+  branch: 'CS',
+  section: 15,
+  year: 1,
+  hostel: true,
+  _id: new ObjectId(""62705d758daa096f2bf24e5c"")
+}","{
+  name: 'banana papaya',
+  stdno: '214xxx34',
+  email: 'banana214xxx34@akgec.ac.in',
+  branch: 'AIML',
+  section: 13,
+  year: 1,
+  hostel: true,
+  _id: new ObjectId(""62705d758daa096f2bf24e5d"")
+}",,,hytujrytjreytj,Tue May 03 2022 04:08:45 GMT+0530 (India Standard Time)
+yurytu,1,"{
+  name: 'tytr  tyer y',
+  stdno: '21xxx435',
+  email: 'tytr21xxx435@akgec.ac.in',
+  branch: 'CS',
+  section: 2,
+  year: 1,
+  hostel: true,
+  _id: new ObjectId(""6270db9b6f9ead80de826304"")
+}","{
+  name: 'dagfagsfdg fgsfdh',
+  stdno: '2111098',
+  email: 'dagfagsfdg2111098@akgec.ac.in',
+  branch: 'CS',
+  section: 11,
+  year: 1,
+  hostel: true,
+  _id: new ObjectId(""6270db9b6f9ead80de826305"")
+}",,,hdgfhdfg,Tue May 03 2022 13:06:59 GMT+0530 (India Standard Time)
+erttrewt,1,"{
+  name: 'fdg sfg fds',
+  stdno: '21xxx646',
+  email: 'fdg2100946@akgec.ac.in',
+  branch: 'CS',
+  section: 3,
+  year: 1,
+  hostel: true,
+  _id: new ObjectId(""6270dc86d43baa635aab0622"")
+}","{
+  name: 'gsfdgh sh shg',
+  stdno: '2115458',
+  email: 'gsfdgh2011458@akgec.ac.in',
+  branch: 'ME',
+  section: 11,
+  year: 1,
+  hostel: true,
+  _id: new ObjectId(""6270dc86d43baa635aab0623"")
+}",,,gsdhgsdfh,Tue May 03 2022 13:10:54 GMT+0530 (India Standard Time)

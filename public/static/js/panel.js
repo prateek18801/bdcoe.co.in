@@ -20,7 +20,7 @@ async function toggleRegistration() {
     if (!password) return;
     if (password.length > 0) {
         setLoading();
-        const response = await fetch('/admin/togglenrUrxS5yvupftlt9RW6c1NeOdmz6ptOs', {
+        const response = await fetch('/admin/toggleregistration', {
             method: 'POST',
             headers: {
                 'Accept': '*/*',
@@ -36,7 +36,7 @@ async function toggleRegistration() {
 
 async function fetchStatus() {
     setLoading();
-    const response = await fetch(`/admin/statusozp7Fi8bKbDtNFGLXnOTsODvVuv52LPE/${userId}`, { method: 'GET' });
+    const response = await fetch(`/admin/registrationstatus/${userId}`, { method: 'GET' });
     const state = await response.json();
     populateDOM(state);
 }
@@ -77,7 +77,7 @@ function populateDOM(state) {
 
 async function fetchRegistrations() {
     document.getElementById("content-table").innerHTML = `<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>`;
-    let response = await fetch(`/admin/eventlog8hUM5uE8unNJCOiGWhY197SqKPOJtwiJ/${userId}`, { method: 'GET' });
+    let response = await fetch(`/admin/eventinfo/${userId}`, { method: 'GET' });
     const jsonData = await response.json();
     populateRegistraionDOM(jsonData);
 }
@@ -87,29 +87,26 @@ function populateRegistraionDOM(data) {
     data.forEach(record => {
         tbodyContent += `<tr>
         <th scope="row">${i}</th>
-        <td>${record.name}</td>
-        <td>${record.stdno}</td>
-        <td>${record.branch}-${record.section}</td>
-        <td>${record.domain}</td>
-        <td>${record.email}</td>
-        <td>${record.contact}</td>
-        <td class="d-flex">
-            <button class="btn btn-outline-danger p-0 me-1" type="button"><span class="material-icons-outlined">delete</span></button>
-            <button class="btn btn-outline-primary p-0" type="button"><span class="material-icons-outlined">edit</span></button>
-        </td>
+        <td>${record.teamname}</td>
+        <td>${record.year}</td>
+        <td><div>${record.leader.name}</div><div>${record.member.name}</div></td>
+        <td><div>${record.leader.stdno}</div><div>${record.member.stdno}</div></td>
+        <td><div>${record.leader.email}</div><div>${record.member.email}</div></td>
+        <td><div>${record.leader.hostel}</div><div>${record.member.hostel}</div></td>
+        <td>${record.hackerrank}</td>
     </tr>`
         i++;
     });
     document.getElementById("content-table").innerHTML = `<thead>
     <tr>
         <th scope="col">#</th>
-        <th scope="col">Name</th>
+        <th scope="col">Team Name</th>
+        <th scope="col">Year</th>
+        <th scope="col">Members</th>
         <th scope="col">Std.No.</th>
-        <th scope="col">Branch</th>
-        <th scope="col">Domain</th>
         <th scope="col">Email</th>
-        <th scope="col">Contact</th>
-        <th scope="col">Actions</th>
+        <th scope="col">Hosteller</th>
+        <th scope="col">Hackerrank</th>
     </tr>
 </thead>
 <tbody id="content-table-body">
@@ -120,7 +117,7 @@ function populateRegistraionDOM(data) {
 
 async function fetchMails() {
     document.getElementById("content-table").innerHTML = `<div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>`;
-    let response = await fetch(`/admin/contactlogtehtp5Dy6FqYB6YEKvu4o9xJhlAeE3Xw/${userId}`, { method: 'GET' });
+    let response = await fetch(`/admin/contactinfo/${userId}`, { method: 'GET' });
     const jsonData = await response.json();
     populateMailDOM(jsonData);
 }

@@ -15,8 +15,8 @@ exports.getRegister = async (req, res) => {
     const firstYrStatus = (firstYrRegCount < 90) ? true : false;
     const secondYrStatus = (secondYrRegCount < 90) ? true : false;
 
-    res.status(200).render("user/register", {
-        pageTitle: "CODEMAZE",
+    return res.status(200).render("user/register", {
+        pageTitle: "Codemaze Registraion",
         firstYrStatus,
         secondYrStatus
     });
@@ -36,7 +36,6 @@ exports.postRegister = async (req, res) => {
     const body = req.body;
     Object.keys(body).forEach(key => body[key] = body[key].trim());
 
-    // console.log(req.body);
     const leader = new Participant({
         name: body.leadname,
         stdno: body.leadstdno,
@@ -123,23 +122,32 @@ exports.getTeamAvailability = async (req, res) => {
 }
 
 exports.getFeedback = (req, res, next) => {
-
+    return res.status(200).render("user/feedback", {
+        pageTitle: "Codemaze Feedback"
+    });
 }
 
 exports.postFeedback = async (req, res) => {
-    const { teamname, rating, message } = req.body;
+    let { teamname, rating, message } = req.body;
     message = message.trim();
     teamname = teamname.trim();
     const feedback = new Feedback({ teamname, rating, message });
     try {
+        const registered = await Registration.findOne({ teamname });
+        if (!registered) {
+            return res.status(400).render("error/fail", {
+                pageTitle: "Error",
+                message: "Not Registered"
+            });
+        }
         await feedback.save();
         return res.status(200).render("user/feedbackSuccess", {
             pageTitle: "Recorded"
         });
     } catch (err) {
-        return res.status(400).json({
-            message: "bad request",
-            error: err.message
+        return res.status(400).render("error/fail", {
+            pageTitle: "Error",
+            message: "Already Responded"
         });
     }
 }

@@ -15,7 +15,7 @@ const feedbackSchema = new mongoose.Schema({
     message: {
         type: String
     },
-    date: {
+    timestamp: {
         type: Date,
         default: Date.now
     }
