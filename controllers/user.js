@@ -10,17 +10,18 @@ const { sendContactConformation, sendEventConformation } = require("../services/
 
 exports.getRegister = async (req, res) => {
 
+    return res.status(300).redirect("/snz4Um9AKSkiAzq3c7IuRI0qdex3qTkZ");
+
     const firstYrRegCount = await Registration.countDocuments({ year: 1 });
     const secondYrRegCount = await Registration.countDocuments({ year: 2 });
-    const firstYrStatus = (firstYrRegCount < 90) ? true : false;
-    const secondYrStatus = (secondYrRegCount < 90) ? true : false;
+    const firstYrStatus = (firstYrRegCount < 100) ? true : false;
+    const secondYrStatus = (secondYrRegCount < 100) ? true : false;
 
     return res.status(200).render("user/register", {
         pageTitle: "Codemaze Registraion",
         firstYrStatus,
         secondYrStatus
     });
-    // res.status(300).redirect("/snz4Um9AKSkiAzq3c7IuRI0qdex3qTkZ");
 }
 
 exports.postRegister = async (req, res) => {
@@ -91,7 +92,6 @@ exports.postRegister = async (req, res) => {
 
 
     } catch (err) {
-        console.log(err);
         res.status(400).render("error/fail", {
             pageTitle: "Registration Failed",
             message: "Bad Request"
